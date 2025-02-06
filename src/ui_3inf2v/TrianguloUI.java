@@ -4,6 +4,8 @@
  */
 package ui_3inf2v;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 20221074010027
@@ -159,11 +161,21 @@ public class TrianguloUI extends javax.swing.JFrame {
         double a = Double.parseDouble(jTextField1.getText());
         double b = Double.parseDouble(jTextField2.getText());
         double c = Double.parseDouble(jTextField3.getText());
-        
+
         tipoLabel.setText("Tipo encontrado...");
         areaLabel.setText("Area encontrada...");
-        
-        
+
+        if (jTextField1.getText().equals("")
+               || jTextField2.getText().equals("")
+               || jTextField3.getText().equals("")        
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Preencha todos os campos",
+                    "ERRO",
+                    JOptionPane.ERROR_MESSAGE
+)
+            
+            );
     }//GEN-LAST:event_calcActionPerformed
 
     /**
